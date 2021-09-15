@@ -43,6 +43,14 @@ final as (
         status_type,
         updated_time as updated_timestamp
     from fields
+
+), most_recent as (
+
+    select
+        *,
+        row_number() over (partition by post_id order by _fivetran_synced desc) = 1 as is_most_recent_record
+    from final
+
 )
 
-select * from final
+select * from most_recent

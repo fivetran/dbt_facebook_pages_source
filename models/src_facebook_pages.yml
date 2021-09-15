@@ -10,3 +10,4 @@ sources:
       - name: post_history
       - name: page
       - name: lifetime_post_metrics_total
+      - name: daily_page_metrics_total
