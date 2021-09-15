@@ -13,8 +13,15 @@ seeds:
   facebook_pages_source_integration_tests:
     facebook_pages_post_history_data:
       +column_types:
-        id: string
-        promotable_id: string
+        id: "{{ 'string' if target.type == 'bigquery' else 'varchar' }}"
+        promotable_id: "{{ 'string' if target.type == 'bigquery' else 'varchar' }}"
+        page_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
     facebook_pages_lifetime_post_metrics_total_data:
       +column_types:
-        post_id: string
+        post_id: "{{ 'string' if target.type == 'bigquery' else 'varchar' }}"
+    facebook_pages_page_data:
+      +column_types:
+        id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
+    facebook_pages_daily_page_metrics_total_data:
+      +column_types:
+        page_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
