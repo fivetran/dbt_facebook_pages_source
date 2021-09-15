@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: facebook_pages
+    schema: "{{ var('facebook_pages_schema', 'facebook_pages') }}"
+    database: "{% if target.type != 'spark'%}{{ var('facebook_pages_database', target.database) }}{% endif %}"
+    loader: Fivetran
+    loaded_at_field: _fivetran_synced
+    tables:
+      - name: post_history
+      - name: page
+      - name: lifetime_post_metrics_total
