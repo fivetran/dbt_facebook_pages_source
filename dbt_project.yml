@@ -7,3 +7,4 @@ vars:
   post_history: "{{ source('facebook_pages','post_history') }}"
   page: "{{ source('facebook_pages','page') }}"
   lifetime_post_metrics_total: "{{ source('facebook_pages','lifetime_post_metrics_total') }}"
+  daily_page_metrics_total: "{{ source('facebook_pages','daily_page_metrics_total') }}"
