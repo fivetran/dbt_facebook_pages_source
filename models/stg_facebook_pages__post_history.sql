@@ -41,7 +41,13 @@ final as (
         promotable_id,
         share_count,
         status_type,
-        updated_time as updated_timestamp
+        updated_time as updated_timestamp,
+        {{ dbt_utils.concat([
+            "'https://facebook.com/'", 
+            dbt_utils.split_part('id',"'_'", 1), 
+            "'/posts/'", 
+            dbt_utils.split_part('id',"'_'", 2)
+            ]) }} as post_url
     from fields
 
 ), most_recent as (
