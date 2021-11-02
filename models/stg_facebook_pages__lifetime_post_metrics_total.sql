@@ -15,6 +15,11 @@ fields as (
                 staging_columns=get_lifetime_post_metrics_total_columns()
             )
         }}
+                
+        {{ fivetran_utils.source_relation(
+            union_schema_variable='facebook_pages_union_schemas', 
+            union_database_variable='facebook_pages_union_databases') 
+        }}
         
     from base
 ),
@@ -62,11 +67,8 @@ final as (
         post_video_views_clicked_to_play as video_views_clicked_to_play,
         post_video_views_organic as video_views_organic,
         post_video_views_paid as video_views_paid,
-        post_video_views_sound_on as video_views_sound_on        
-        {{ fivetran_utils.source_relation(
-            union_schema_variable='facebook_pages_union_schemas', 
-            union_database_variable='facebook_pages_union_databases') 
-        }}
+        post_video_views_sound_on as video_views_sound_on,
+        source_relation
     from fields
 )
 

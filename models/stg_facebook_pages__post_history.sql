@@ -15,6 +15,11 @@ fields as (
                 staging_columns=get_post_history_columns()
             )
         }}
+                
+        {{ fivetran_utils.source_relation(
+            union_schema_variable='facebook_pages_union_schemas', 
+            union_database_variable='facebook_pages_union_databases') 
+        }}
         
     from base
 ),
@@ -47,11 +52,8 @@ final as (
             dbt_utils.split_part('id',"'_'", 1), 
             "'/posts/'", 
             dbt_utils.split_part('id',"'_'", 2)
-            ]) }} as post_url        
-        {{ fivetran_utils.source_relation(
-            union_schema_variable='facebook_pages_union_schemas', 
-            union_database_variable='facebook_pages_union_databases') 
-        }}
+            ]) }} as post_url,
+        source_relation
     from fields
 
 ), most_recent as (

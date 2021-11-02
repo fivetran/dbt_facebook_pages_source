@@ -15,6 +15,11 @@ fields as (
                 staging_columns=get_page_columns()
             )
         }}
+                
+        {{ fivetran_utils.source_relation(
+            union_schema_variable='facebook_pages_union_schemas', 
+            union_database_variable='facebook_pages_union_databases') 
+        }}
         
     from base
 ),
@@ -107,11 +112,8 @@ final as (
         website,
         were_here_count,
         whatsapp_number,
-        written_by        
-        {{ fivetran_utils.source_relation(
-            union_schema_variable='facebook_pages_union_schemas', 
-            union_database_variable='facebook_pages_union_databases') 
-        }}
+        written_by,
+        source_relation
     from fields
 )
 
