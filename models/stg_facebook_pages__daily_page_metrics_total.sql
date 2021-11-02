@@ -76,7 +76,11 @@ final as (
         page_views_external_referrals as views_external_referrals,
         page_views_logged_in_total as views_logged_in_total,
         page_views_logout as views_logout,
-        page_views_total as views_total
+        page_views_total as views_total        
+        {{ fivetran_utils.source_relation(
+            union_schema_variable='facebook_pages_union_schemas', 
+            union_database_variable='facebook_pages_union_databases') 
+        }}
     from fields
 )
 

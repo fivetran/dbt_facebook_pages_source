@@ -47,7 +47,11 @@ final as (
             dbt_utils.split_part('id',"'_'", 1), 
             "'/posts/'", 
             dbt_utils.split_part('id',"'_'", 2)
-            ]) }} as post_url
+            ]) }} as post_url        
+        {{ fivetran_utils.source_relation(
+            union_schema_variable='facebook_pages_union_schemas', 
+            union_database_variable='facebook_pages_union_databases') 
+        }}
     from fields
 
 ), most_recent as (

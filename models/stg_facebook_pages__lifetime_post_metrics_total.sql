@@ -62,7 +62,11 @@ final as (
         post_video_views_clicked_to_play as video_views_clicked_to_play,
         post_video_views_organic as video_views_organic,
         post_video_views_paid as video_views_paid,
-        post_video_views_sound_on as video_views_sound_on
+        post_video_views_sound_on as video_views_sound_on        
+        {{ fivetran_utils.source_relation(
+            union_schema_variable='facebook_pages_union_schemas', 
+            union_database_variable='facebook_pages_union_databases') 
+        }}
     from fields
 )
 
