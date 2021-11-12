@@ -5,3 +5,5 @@ packages:
     revision: "feature/union-data-expansion"  
   - package: dbt-labs/dbt_utils
     version: 0.7.3
+  - package: dbt-labs/spark_utils
+    version: [">=0.2.0", "<0.3.0"]
