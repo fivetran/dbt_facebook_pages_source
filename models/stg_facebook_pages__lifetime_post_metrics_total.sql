@@ -70,6 +70,15 @@ final as (
         post_video_views_sound_on as video_views_sound_on,
         source_relation
     from fields
+),
+
+is_most_recent as (
+
+    select 
+        *,
+        row_number() over (partition by post_id, source_relation order by date_day desc) = 1 as is_most_recent_record
+    from final
+
 )
 
-select * from final
+select * from is_most_recent
