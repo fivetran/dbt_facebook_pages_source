@@ -1,6 +1,6 @@
 [![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![dbt logo and version](https://img.shields.io/static/v1?logo=dbt&label=dbt-version&message=[>=0.20.0,<1.0.0]&color=orange)
 # Facebook Pages (Source)
-This package models Facebook Pages data from [Fivetran's connector](https://fivetran.com/docs/applications/facebook-pages). It uses data in the format described by [this ERD](https://docs.google.com/presentation/d/1ke65vE-n6jQwBg3w1etYQ_KhU5f1WoFH__t_yf6u7t8/edit#slide=id.g311502b468_5_443).
+This package models Facebook Pages data from [Fivetran's connector](https://fivetran.com/docs/applications/facebook-pages). It uses data in the format described by [this ERD](https://fivetran.com/docs/applications/facebook-pages#schemainformation).
 
 ## Models
 This package contains staging models, designed to work simultaneously with our [Facebook Pages modeling package](https://github.com/fivetran/dbt_facebook_pages) and our [Social Media Reporting package](https://github.com/fivetran/dbt_social_media_reporting). The staging models name columns consistently across all packages:
@@ -49,7 +49,7 @@ vars:
 ```
 ### Changing the Build Schema
 
-By default, this package will build the Facebook Pages staging models within a schema titled (`<target_schema>` + `_stg_facebook_ages`) in your target database. If this is not where you would like your Facebook Pages staging data to be written to, add the following configuration to your `dbt_project.yml` file:
+By default, this package will build the Facebook Pages staging models within a schema titled (`<target_schema>` + `_stg_facebook_pages`) in your target database. If this is not where you would like your Facebook Pages staging data to be written to, add the following configuration to your `dbt_project.yml` file:
 
 ```yml
 # dbt_project.yml
