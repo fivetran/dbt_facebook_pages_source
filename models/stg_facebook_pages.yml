@@ -3,11 +3,19 @@ version: 2
 models:
   - name: stg_facebook_pages__daily_page_metrics_total
     description: Each record reporesents the lifetime post metrics for a Page as of a date.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - page_id
+            - date_day
+            - source_relation
     columns:
       - name: _fivetran_synced
         description: The timestamp of when the data was last synced with Fivetran
       - name: date_day
         description: The date of the metric
+        tests:
+          - not_null
       - name: actions_post_reactions_anger_total
         description: The total amount of reactions with type 'anger' on posts from the Page
       - name: actions_post_reactions_haha_total
@@ -38,6 +46,8 @@ models:
         description: The number of fans who are online per day.
       - name: page_id
         description: The ID of the Page
+        tests:
+          - not_null
       - name: impressions
         description: The number of times any content from your Page or about your Page entered a person's screen.
       - name: impressions_nonviral
@@ -118,12 +128,20 @@ models:
         description: The source of the record, if the unioning functionality is being used.
 
   - name: stg_facebook_pages__lifetime_post_metrics_total
-    description: Each record reporesents the lifetime post metrics for a Page as of a date.
+    description: Each record represents the lifetime post metrics for a Page as of a date.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - post_id
+            - date_day
+            - source_relation
     columns:
       - name: _fivetran_synced
         description: The timestamp of when the data was last synced with Fivetran
       - name: date_day
         description: The date of the metric
+        tests:  
+          - not_null
       - name: activity
         description: The total amount of activity on the post
       - name: clicks
@@ -134,6 +152,8 @@ models:
         description: The total amount of engaged users on the post
       - name: post_id
         description: The ID of the post
+        tests:
+          - not_null
       - name: impressions
         description: The total amount of impressions on the post
       - name: impressions_fan
@@ -213,6 +233,11 @@ models:
 
   - name: stg_facebook_pages__page
     description: Each record represents a Facebook page.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - page_id
+            - source_relation
     columns:
       - name: _fivetran_deleted
         description: Whether the record has been deleted
@@ -290,6 +315,8 @@ models:
         description: Hometown of the band. Applicable to Bands
       - name: page_id
         description: The ID of the Page.
+        tests: 
+          - not_null
       - name: impressum
         description: Legal information about the Page publishers.
       - name: influences
@@ -391,6 +418,12 @@ models:
 
   - name: stg_facebook_pages__post_history
     description:  Each record represents a version of a post in Facebook.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - post_id
+            - updated_timestamp
+            - source_relation
     columns:
       - name: _fivetran_synced
         description: The timestamp of when the data was last synced by Fivetran
@@ -400,6 +433,8 @@ models:
         description: The time the post was initially published. For a post about a life event, this is the date and time of the life event.
       - name: post_id
         description: The ID of the post.
+        tests:
+          - not_null
       - name: is_eligible_for_promotion
         description: Whether this post is eligible to be promoted on Facebook.
       - name: is_hidden
@@ -430,7 +465,7 @@ models:
         description: The share count of this post. The share count may include deleted posts and posts you cannot see for privacy reasons
       - name: status_type
         description: The type of a status update.
-      - name: updated_time
+      - name: updated_timestamp
         description: The time the post was last updated, which occurs when the post was created, edited, or a User comments on a post.
       - name: source_relation
         description: The source of the record, if the unioning functionality is being used.

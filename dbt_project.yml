@@ -14,4 +14,4 @@ models:
     +schema: stg_facebook_pages
     +materialized: view
     tmp:
-      +materialized: view
+      +materialized: table
