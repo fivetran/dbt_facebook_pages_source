@@ -12,6 +12,6 @@ vars:
 models:
   facebook_pages_source:
     +schema: stg_facebook_pages
-    +materialized: view
+    +materialized: table
     tmp:
-      +materialized: table
+      +materialized: view
