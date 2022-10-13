@@ -47,11 +47,11 @@ final as (
         share_count,
         status_type,
         updated_time as updated_timestamp,
-        {{ dbt_utils.concat([
+        {{ dbt.concat([
             "'https://facebook.com/'", 
-            dbt_utils.split_part('id',"'_'", 1), 
+            dbt.split_part('id',"'_'", 1), 
             "'/posts/'", 
-            dbt_utils.split_part('id',"'_'", 2)
+            dbt.split_part('id',"'_'", 2)
             ]) }} as post_url,
         source_relation
     from fields
