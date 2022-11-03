@@ -92,7 +92,8 @@ dispatch:
 </details>
 
 ## (Optional) Step 5: Orchestrate your models with Fivetran Transformations for dbt Core™
-<details><summary>Expand for details</summary><br>
+<details><summary>Expand for details</summary>
+<br>
 Fivetran offers the ability for you to orchestrate your dbt project through the [Fivetran Transformations for dbt Core™](https://fivetran.com/docs/transformations/dbt) product. Refer to the linked docs for more information on how to setup your project for orchestration through Fivetran. 
 </details>
 
