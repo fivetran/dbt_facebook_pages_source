@@ -8,6 +8,7 @@ sources:
     loaded_at_field: _fivetran_synced
     tables:
       - name: post_history
+        identifier: "{{ var('facebook_pages_post_history_identifier', 'post_history')}}"
         description: Each record represents a version of a post in Facebook.
         columns:
           - name: _fivetran_synced
@@ -52,6 +53,7 @@ sources:
             description: The time the post was last updated, which occurs when the post was created, edited, or a User comments on a post.
 
       - name: page
+        identifier: "{{ var('facebook_pages_page_identifier', 'page')}}"
         description: Each record represents a Facebook page.
         columns:
           - name: _fivetran_deleted
@@ -81,7 +83,7 @@ sources:
           - name: built
             description: Year vehicle was built. Applicable to Vehicles.
           - name: can_checkin
-            description: Whether the Page has checkin functionality enabled. 
+            description: Whether the Page has check-in functionality enabled. 
           - name: can_post
             description: Indicates whether the current app user can post on this Page.
           - name: category
@@ -89,7 +91,7 @@ sources:
           - name: category_list
             description: The Page's sub-categories. 
           - name: checkins
-            description: Number of checkins at a place represented by a Page
+            description: Number of check-ins at a place represented by a Page
           - name: company_overview
             description: The company overview. Applicable to Companies.
           - name: culinary_team
@@ -228,7 +230,8 @@ sources:
             description: The writer of the TV show. Applicable to TV Shows.
 
       - name: lifetime_post_metrics_total
-        description: Each record reporesents the lifetime post metrics for a Page as of a date.
+        description: Each record represents the lifetime post metrics for a Page as of a date.
+        identifier: "{{ var('facebook_pages_lifetime_post_metrics_total_identifier', 'lifetime_post_metrics_total')}}"       
         columns:
           - name: _fivetran_synced
             description: The timestamp of when the data was last synced with Fivetran
@@ -320,7 +323,8 @@ sources:
             description: The total number of views on the post when the sound was on
 
       - name: daily_page_metrics_total
-        description: Each record reporesents the lifetime post metrics for a Page as of a date.
+        identifier: "{{ var('facebook_pages_daily_page_metrics_total_identifier', 'daily_page_metrics_total')}}"       
+        description: Each record represents the lifetime post metrics for a Page as of a date.
         columns:
           - name: _fivetran_synced
             description: The timestamp of when the data was last synced with Fivetran
@@ -425,7 +429,7 @@ sources:
           - name: page_video_views_paid
             description: The number of times your Page's promoted videos played for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds. For each impression of a video, we'll count video views separately and exclude any time spent replaying the video.
           - name: page_views_external_referrals
-            description: Top referrering external domains sending traffic to your Page.
+            description: Top referring external domains sending traffic to your Page.
           - name: page_views_logged_in_total
             description: The number of times a Page's profile has been viewed by people logged in to Facebook.
           - name: page_views_logout
