@@ -52,7 +52,7 @@ vars:
 
 By default, this package will build the Facebook Pages staging models within a schema titled (`<target_schema>` + `_stg_facebook_pages`) in your target database. If this is not where you would like your Facebook Pages staging data to be written to, add the following configuration to your `dbt_project.yml` file:
 
-```yml 
+```yml
 models:
     facebook_pages_source:
       +schema: my_new_schema_name # leave blank for just the target_schema
