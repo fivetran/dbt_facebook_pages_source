@@ -35,7 +35,7 @@ final as (
         page_actions_post_reactions_like_total as actions_post_reactions_like_total,
         page_actions_post_reactions_love_total as actions_post_reactions_love_total,
         page_actions_post_reactions_sorry_total as actions_post_reactions_sorry_total,
-        coalesce(page_actions_post_reactions_total,(page_actions_post_reactions_anger_total + page_actions_post_reactions_haha_total + page_actions_post_reactions_like_total + page_actions_post_reactions_love_total + page_actions_post_reactions_sorry_total)) as actions_post_reactions_total,
+        coalesce(page_actions_post_reactions_total,(page_actions_post_reactions_anger_total + page_actions_post_reactions_haha_total + page_actions_post_reactions_like_total + page_actions_post_reactions_love_total + page_actions_post_reactions_sorry_total + page_actions_post_reactions_wow_total)) as actions_post_reactions_total,
         page_actions_post_reactions_wow_total as actions_post_reactions_wow_total,
         page_consumptions as consumptions,
         page_content_activity as content_activity,
