@@ -2,7 +2,7 @@
 
 ## Bug Fixes
 [PR #7](https://github.com/fivetran/dbt_facebook_pages_source/pull/7) includes the following changes:
-- Ensures `actions_post_reactions_total` is not null by falling back to summing the separate `page_actions_post_reactions_*_total` fields (resolves issue: https://github.com/fivetran/dbt_facebook_pages/issues/8)
+- Ensures `actions_post_reactions_total` is not null by falling back to summing the separate `page_actions_post_reactions_*_total` fields (resolves issue [#8](https://github.com/fivetran/dbt_facebook_pages/issues/8))
 
 ## Contributors
 - [@zhyatt](https://github.com/zhyatt) ([PR #7](https://github.com/fivetran/dbt_facebook_pages_source/pull/7))
