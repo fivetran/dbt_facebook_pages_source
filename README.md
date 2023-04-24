@@ -34,14 +34,14 @@ dispatch:
     search_order: ['spark_utils', 'dbt_utils']
 ```
 
-## Step 2: Install the package
+## Step 2: Install the package (skip if also using the `facebook_pages` transformation package)
 Include the following facebook_pages_source package version in your `packages.yml` file **only if you are NOT also installing the [Facebook Pages transformation package](https://github.com/fivetran/dbt_facebook_pages_source)**. The transform package has a dependency on this source package.
 > TIP: Check [dbt Hub](https://hub.getdbt.com/) for the latest installation instructions or [read the dbt docs](https://docs.getdbt.com/docs/package-management) for more information on installing packages.
 
 ```yaml
 packages:
   - package: fivetran/facebook_pages_source
-    version: [">=0.2.0", "<0.3.0"]
+    version: [">=0.2.0", "<0.3.0"] # we recommend using ranges to capture non-breaking changes automatically
 ```
  
 ## Step 3: Define database and schema variables
