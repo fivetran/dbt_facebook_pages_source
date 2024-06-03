@@ -30,12 +30,6 @@ models:
         description: The total amount of reactions on posts from the Page
       - name: actions_post_reactions_wow_total
         description: The total amount of reactions with type 'wow' on posts from the Page
-      - name: consumptions
-        description: The number of times people clicked on any Page content.
-      - name: content_activity
-        description: The number of people talking about the Page's stories.
-      - name: engaged_users
-        description: The number of people who engaged with your Page. Engagement includes any click.
       - name: fan_adds
         description: The number of fans added to the Page.
       - name: fan_removes
@@ -60,8 +54,6 @@ models:
         description: The number of times any content from your Page or about your Page entered a person's screen with social information attached. Social information displays when a person's friend interacted with your Page, post or story. This includes when someone's friend likes or follows your Page, engages with a post, shares a photo of your Page and checks into your Page.
       - name: negative_feedback
         description: The number of times people took a negative action (e.g., un-liked or hid a post).
-      - name: places_checkin_mobile
-        description: The number of times people checked into a place using mobile phones.
       - name: places_checkin_total
         description: The number of times people checked into a place.
       - name: post_engagements
@@ -158,8 +150,6 @@ models:
         description: The total amount of impressions on the post
       - name: impressions_fan
         description: The total amount of impressions on the post by fans
-      - name: impressions_fan_paid
-        description: The total amount of impressions on the post by paid fans
       - name: impressions_nonviral
         description: The total amount of non-viral impressions on the post
       - name: impressions_organic

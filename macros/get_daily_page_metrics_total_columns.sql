@@ -10,9 +10,6 @@
     {"name": "page_actions_post_reactions_sorry_total", "datatype": dbt.type_int()},
     {"name": "page_actions_post_reactions_total", "datatype": dbt.type_int()},
     {"name": "page_actions_post_reactions_wow_total", "datatype": dbt.type_int()},
-    {"name": "page_consumptions", "datatype": dbt.type_int()},
-    {"name": "page_content_activity", "datatype": dbt.type_int()},
-    {"name": "page_engaged_users", "datatype": dbt.type_int()},
     {"name": "page_fan_adds", "datatype": dbt.type_int()},
     {"name": "page_fan_removes", "datatype": dbt.type_int()},
     {"name": "page_fans", "datatype": dbt.type_int()},
@@ -24,7 +21,6 @@
     {"name": "page_impressions_paid", "datatype": dbt.type_int()},
     {"name": "page_impressions_viral", "datatype": dbt.type_int()},
     {"name": "page_negative_feedback", "datatype": dbt.type_int()},
-    {"name": "page_places_checkin_mobile", "datatype": dbt.type_int()},
     {"name": "page_places_checkin_total", "datatype": dbt.type_int()},
     {"name": "page_post_engagements", "datatype": dbt.type_int()},
     {"name": "page_posts_impressions", "datatype": dbt.type_int()},
@@ -52,9 +48,6 @@
     {"name": "page_video_views_click_to_play", "datatype": dbt.type_int()},
     {"name": "page_video_views_organic", "datatype": dbt.type_int()},
     {"name": "page_video_views_paid", "datatype": dbt.type_int()},
-    {"name": "page_views_external_referrals", "datatype": dbt.type_int()},
-    {"name": "page_views_logged_in_total", "datatype": dbt.type_int()},
-    {"name": "page_views_logout", "datatype": dbt.type_int()},
     {"name": "page_views_total", "datatype": dbt.type_int()}
 ] %}
 

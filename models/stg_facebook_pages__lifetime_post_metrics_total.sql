@@ -33,7 +33,6 @@ final as (
         post_clicks as clicks,
         post_impressions as impressions,
         post_impressions_fan as impressions_fan,
-        {# post_impressions_fan_paid as impressions_fan_paid, #}
         post_impressions_nonviral as impressions_nonviral,
         post_impressions_organic as impressions_organic,
         post_impressions_paid as impressions_paid,
