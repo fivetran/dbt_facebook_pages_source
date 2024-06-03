@@ -2,7 +2,7 @@
 [PR #11](https://github.com/fivetran/dbt_facebook_pages_source/pull/11) includes the following changes:
 
 ## 🚨 Breaking Changes 🚨:
-- This change is made breaking since columns have been removed, stemming from the [Feb 2024](https://fivetran.com/docs/connectors/applications/facebook-pages/changelog#february2024) and [Apr 2024](https://fivetran.com/docs/connectors/applications/facebook-pages/changelog#april2024) Fivetran Facebook Pages connector updates.
+- This change is made breaking since columns have been removed, stemming from the [Feb 2024](https://fivetran.com/docs/connectors/applications/facebook-pages/changelog#february2024) and [Apr 2024](https://fivetran.com/docs/connectors/applications/facebook-pages/changelog#april2024) Fivetran Facebook Pages connector updates. Adjust your downstream use cases accordingly. 
     - Columns removed from staging model `stg_facebook_pages__daily_page_metrics_total`:
         - `page_consumptions`
         - `page_content_activity`
