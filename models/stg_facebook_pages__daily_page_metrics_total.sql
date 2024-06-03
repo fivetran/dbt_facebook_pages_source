@@ -37,9 +37,9 @@ final as (
         page_actions_post_reactions_sorry_total as actions_post_reactions_sorry_total,
         page_actions_post_reactions_wow_total as actions_post_reactions_wow_total,
         coalesce(page_actions_post_reactions_total,(page_actions_post_reactions_anger_total + page_actions_post_reactions_haha_total + page_actions_post_reactions_like_total + page_actions_post_reactions_love_total + page_actions_post_reactions_sorry_total + page_actions_post_reactions_wow_total)) as actions_post_reactions_total,
-        page_consumptions as consumptions,
-        page_content_activity as content_activity,
-        page_engaged_users as engaged_users,
+        {# page_consumptions as consumptions, #}
+        {# page_content_activity as content_activity, #}
+        {# page_engaged_users as engaged_users, #}
         page_fan_adds as fan_adds,
         page_fan_removes as fan_removes,
         page_fans as fans,
@@ -50,7 +50,7 @@ final as (
         page_impressions_paid as impressions_paid,
         page_impressions_viral as impressions_viral,
         page_negative_feedback as negative_feedback,
-        page_places_checkin_mobile as places_checkin_mobile,
+        {# page_places_checkin_mobile as places_checkin_mobile, #}
         page_places_checkin_total as places_checkin_total,
         page_post_engagements as post_engagements,
         page_posts_impressions as posts_impressions,
