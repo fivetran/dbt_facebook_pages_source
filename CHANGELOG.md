@@ -4,15 +4,15 @@
 ## 🚨 Breaking Changes 🚨:
 - This change is made breaking since columns have been removed, since these columns have been removed in the [Feb 2024](https://fivetran.com/docs/connectors/applications/facebook-pages/changelog#february2024) and [Apr 2024](https://fivetran.com/docs/connectors/applications/facebook-pages/changelog#april2024) Fivetran Facebook Pages connector updates. You will need to adjust your downstream use cases accordingly. 
     - Columns removed from staging model `stg_facebook_pages__daily_page_metrics_total`:
-        - `page_consumptions`
-        - `page_content_activity`
-        - `page_engaged_users`
-        - `page_places_checkin_mobile`
-        - `page_views_external_referrals`
-        - `page_views_logged_in_total`
-        - `page_views_logout`
+        - `consumptions`
+        - `content_activity`
+        - `engaged_users`
+        - `places_checkin_mobile`
+        - `views_external_referrals`
+        - `views_logged_in_total`
+        - `views_logout`
     - Columns removed from staging model `stg_facebook_pages__lifetime_post_metrics_total`:
-        - `post_impressions_fan_paid`
+        - `impressions_fan_paid`
 
 ## Features
 - Updated documentation to reflect the current schema. 
