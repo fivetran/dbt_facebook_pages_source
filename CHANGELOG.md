@@ -2,7 +2,7 @@
 [PR #11](https://github.com/fivetran/dbt_facebook_pages_source/pull/11) includes the following changes:
 
 ## 🚨 Breaking Changes 🚨:
-- This change is made breaking since columns have been removed, stemming from the [Feb 2024](https://fivetran.com/docs/connectors/applications/facebook-pages/changelog#february2024) and [Apr 2024](https://fivetran.com/docs/connectors/applications/facebook-pages/changelog#april2024) Fivetran Facebook Pages connector updates. Adjust your downstream use cases accordingly. 
+- This change is made breaking since columns have been removed, since these columns have been removed in the [Feb 2024](https://fivetran.com/docs/connectors/applications/facebook-pages/changelog#february2024) and [Apr 2024](https://fivetran.com/docs/connectors/applications/facebook-pages/changelog#april2024) Fivetran Facebook Pages connector updates. You will need to adjust your downstream use cases accordingly. 
     - Columns removed from staging model `stg_facebook_pages__daily_page_metrics_total`:
         - `page_consumptions`
         - `page_content_activity`
@@ -11,8 +11,11 @@
         - `page_views_external_referrals`
         - `page_views_logged_in_total`
         - `page_views_logout`
-    - Columns removed from staging model `stg_facebook_pages__lifetime_post_metrics_total`
+    - Columns removed from staging model `stg_facebook_pages__lifetime_post_metrics_total`:
         - `post_impressions_fan_paid`
+
+## Features
+- Updated documentation to reflect the current schema. 
 
 ## Under the Hood:
 - Incorporated the new `fivetran_utils.drop_schemas_automation` macro into the end of each Buildkite integration test job.

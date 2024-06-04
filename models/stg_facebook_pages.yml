@@ -108,12 +108,6 @@ models:
         description: The number of times your Page's videos played for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds, by organic reach. During a single instance of a video playing, we'll exclude any time spent replaying the video.
       - name: video_views_paid
         description: The number of times your Page's promoted videos played for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds. For each impression of a video, we'll count video views separately and exclude any time spent replaying the video.
-      - name: views_external_referrals
-        description: Top referrering external domains sending traffic to your Page.
-      - name: views_logged_in_total
-        description: The number of times a Page's profile has been viewed by people logged in to Facebook.
-      - name: views_logout
-        description: The number of times a Page's profile has been viewed by people not logged in to Facebook.
       - name: views_total
         description: The number of times a Page's profile has been viewed by people not logged in to Facebook.
       - name: source_relation
@@ -134,14 +128,8 @@ models:
         description: The date of the metric
         tests:  
           - not_null
-      - name: activity
-        description: The total amount of activity on the post
       - name: clicks
         description: The total amount of clicks on the post
-      - name: engaged_fan
-        description: The total amount of engaged fans on the post
-      - name: engaged_users
-        description: The total amount of engaged users on the post
       - name: post_id
         description: The ID of the post
         tests:
@@ -202,7 +190,7 @@ models:
         description: The total number of views on the post longer than 10 seconds when the post was clicked to play
       - name: video_views_10s_organic
         description: The total number of organic views on the post longer than 10 seconds
-      - name: video_views_10s_paid
+      - name: video_views_10_s_paid
         description: The total number of paid views on the post longer than 10 seconds
       - name: video_views_10s_sound_on
         description: The total number of views on the post longer than 10 seconds when the sound was on
@@ -220,6 +208,8 @@ models:
         description: The total number of views on the post when the sound was on
       - name: source_relation
         description: The source of the record, if the unioning functionality is being used.
+      - name: is_most_recent_record
+        description: Boolean indicating if the record is the most recent.
 
   - name: stg_facebook_pages__page
     description: Each record represents a Facebook page.
