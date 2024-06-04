@@ -9,7 +9,7 @@ vars:
     facebook_pages_lifetime_post_metrics_total_identifier: "facebook_pages_lifetime_post_metrics_total_data"
     facebook_pages_page_identifier: "facebook_pages_page_data"
     facebook_pages_post_history_identifier: "facebook_pages_post_history_data"
-    facebook_pages_schema: zz_dbt_catherine_fb_pages # facebook_pages_source_integration_tests_02
+    facebook_pages_schema: facebook_pages_source_integration_tests_02
 
 dispatch:
   - macro_namespace: dbt_utils
