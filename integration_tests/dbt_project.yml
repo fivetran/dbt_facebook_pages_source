@@ -1,5 +1,5 @@
 name: 'facebook_pages_source_integration_tests'
-version: '0.2.1'
+version: '0.3.0'
 profile: 'integration_tests'
 config-version: 2
 
@@ -9,7 +9,7 @@ vars:
     facebook_pages_lifetime_post_metrics_total_identifier: "facebook_pages_lifetime_post_metrics_total_data"
     facebook_pages_page_identifier: "facebook_pages_page_data"
     facebook_pages_post_history_identifier: "facebook_pages_post_history_data"
-    facebook_pages_schema: facebook_pages_source_integration_tests
+    facebook_pages_schema: facebook_pages_source_integration_tests_02
 
 dispatch:
   - macro_namespace: dbt_utils

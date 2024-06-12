@@ -237,8 +237,6 @@ sources:
             description: The timestamp of when the data was last synced with Fivetran
           - name: date
             description: The date of the metric
-          - name: post_activity
-            description: The total amount of activity on the post
           - name: post_clicks
             description: The total amount of clicks on the post
           - name: post_engaged_fan
@@ -251,8 +249,6 @@ sources:
             description: The total amount of impressions on the post
           - name: post_impressions_fan
             description: The total amount of impressions on the post by fans
-          - name: post_impressions_fan_paid
-            description: The total amount of impressions on the post by paid fans
           - name: post_impressions_nonviral
             description: The total amount of non-viral impressions on the post
           - name: post_impressions_organic
@@ -344,12 +340,6 @@ sources:
             description: The total amount of reactions on posts from the Page
           - name: page_actions_post_reactions_wow_total
             description: The total amount of reactions with type 'wow' on posts from the Page
-          - name: page_consumptions
-            description: The number of times people clicked on any Page content.
-          - name: page_content_activity
-            description: The number of people talking about the Page's stories.
-          - name: page_engaged_users
-            description: The number of people who engaged with your Page. Engagement includes any click.
           - name: page_fan_adds
             description: The number of fans added to the Page.
           - name: page_fan_removes
@@ -372,8 +362,6 @@ sources:
             description: The number of times any content from your Page or about your Page entered a person's screen with social information attached. Social information displays when a person's friend interacted with your Page, post or story. This includes when someone's friend likes or follows your Page, engages with a post, shares a photo of your Page and checks into your Page.
           - name: page_negative_feedback
             description: The number of times people took a negative action (e.g., un-liked or hid a post).
-          - name: page_places_checkin_mobile
-            description: The number of times people checked into a place using mobile phones.
           - name: page_places_checkin_total
             description: The number of times people checked into a place.
           - name: page_post_engagements
@@ -428,11 +416,5 @@ sources:
             description: The number of times your Page's videos played for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds, by organic reach. During a single instance of a video playing, we'll exclude any time spent replaying the video.
           - name: page_video_views_paid
             description: The number of times your Page's promoted videos played for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds. For each impression of a video, we'll count video views separately and exclude any time spent replaying the video.
-          - name: page_views_external_referrals
-            description: Top referring external domains sending traffic to your Page.
-          - name: page_views_logged_in_total
-            description: The number of times a Page's profile has been viewed by people logged in to Facebook.
-          - name: page_views_logout
-            description: The number of times a Page's profile has been viewed by people not logged in to Facebook.
           - name: page_views_total
             description: The number of times a Page's profile has been viewed by people not logged in to Facebook.

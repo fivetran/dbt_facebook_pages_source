@@ -1,9 +1,27 @@
-# dbt_facebook_pages_source v0.UPDATE.UPDATE
+# dbt_facebook_pages_source v0.3.0
+[PR #11](https://github.com/fivetran/dbt_facebook_pages_source/pull/11) includes the following changes:
 
- ## Under the Hood:
+## 🚨 Breaking Changes 🚨:
+- This change is made breaking since columns have been removed, since these columns have been removed in the [Feb 2024](https://fivetran.com/docs/connectors/applications/facebook-pages/changelog#february2024) and [Apr 2024](https://fivetran.com/docs/connectors/applications/facebook-pages/changelog#april2024) Fivetran Facebook Pages connector updates. You will need to adjust your downstream use cases accordingly. 
+    - Columns removed from staging model `stg_facebook_pages__daily_page_metrics_total`:
+        - `consumptions`
+        - `content_activity`
+        - `engaged_users`
+        - `places_checkin_mobile`
+        - `views_external_referrals`
+        - `views_logged_in_total`
+        - `views_logout`
+    - Columns removed from staging model `stg_facebook_pages__lifetime_post_metrics_total`:
+        - `impressions_fan_paid`
 
+## Features
+- Updated documentation to reflect the current schema. 
+
+## Under the Hood:
 - Incorporated the new `fivetran_utils.drop_schemas_automation` macro into the end of each Buildkite integration test job.
-- Updated the pull request [templates](/.github).
+- Updated the pull request templates.
+- Included auto-releaser GitHub Actions workflow to automate future releases.
+
 # dbt_facebook_pages_source v0.2.1
 
 ## Bug Fixes
