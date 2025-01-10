@@ -1,3 +1,8 @@
+# dbt_facebook_pages_source version.version
+
+## Documentation
+- Corrected references to connectors and connections in the README. ([#15](https://github.com/fivetran/dbt_facebook_pages_source/pull/15))
+
 # dbt_facebook_pages_source v0.3.0
 [PR #11](https://github.com/fivetran/dbt_facebook_pages_source/pull/11) includes the following changes:
 
