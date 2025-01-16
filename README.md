@@ -23,7 +23,7 @@
 ## How do I use the dbt package?
 ### Step 1: Prerequisites
 To use this dbt package, you must have the following:
-- A Fivetran Facbook Pages connection syncing data into your destination.
+- A Fivetran Facebook Pages connection syncing data into your destination.
 - A **BigQuery**, **Snowflake**, **Redshift**, **PostgreSQL**, or **Databricks** destination.
 
 #### Databricks Dispatch Configuration
