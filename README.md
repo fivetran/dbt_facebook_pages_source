@@ -1,16 +1,20 @@
-<p align="center">
+
+# Facebook Pages Source dbt Package ([Docs](https://fivetran.github.io/dbt_facebook_pages_source/))
+
+<p align="left">
     <a alt="License"
         href="https://github.com/fivetran/dbt_facebook_pages_source/blob/main/LICENSE">
         <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a>
     <a alt="dbt-core">
-        <img src="https://img.shields.io/badge/dbt_Core™_version->=1.3.0_<2.0.0-orange.svg" /></a>
+        <img src="https://img.shields.io/badge/dbt_Core™_version->=1.3.0_,<2.0.0-orange.svg" /></a>
     <a alt="Maintained?">
         <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" /></a>
     <a alt="PRs">
         <img src="https://img.shields.io/badge/Contributions-welcome-blueviolet" /></a>
+    <a alt="Fivetran Quickstart Compatible"
+        href="https://fivetran.com/docs/transformations/dbt/quickstart">
+        <img src="https://img.shields.io/badge/Fivetran_Quickstart_Compatible%3F-yes-green.svg" /></a>
 </p>
-
-# Facebook Pages Source dbt Package ([Docs](https://fivetran.github.io/dbt_facebook_pages_source/))
 
 ## What does this dbt package do?
 - Materializes [Facebook Pages staging tables](https://fivetran.github.io/dbt_facebook_pages_source/#!/overview/facebook_pages_source/models/?g_v=1) which leverage data in the format described by [this ERD](https://fivetran.com/docs/applications/facebook-pages#schemainformation). These staging tables clean, test, and prepare your Facebook Pages data from [Fivetran's connector](https://fivetran.com/docs/applications/facebook-pages) for analysis by doing the following:
@@ -69,7 +73,7 @@ models:
 #### Change the source table references
 If an individual source table has a different name than the package expects, add the table name as it appears in your destination to the respective variable:
 > IMPORTANT: See this project's [`dbt_project.yml`](https://github.com/fivetran/dbt_facebook_pages_source/blob/main/dbt_project.yml) variable declarations to see the expected names.
-    
+
 ```yml
 vars:
     facebook_pages_<default_source_table_name>_identifier: your_table_name 
@@ -95,7 +99,7 @@ vars:
 ### (Optional) Step 5: Orchestrate your models with Fivetran Transformations for dbt Core™
 <details><summary>Expand for details</summary>
 <br>
-    
+
 Fivetran offers the ability for you to orchestrate your dbt project through the [Fivetran Transformations for dbt Core™](https://fivetran.com/docs/transformations/dbt) product. Refer to the linked docs for more information on how to setup your project for orchestration through Fivetran.
 </details>
 
